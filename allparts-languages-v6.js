@@ -593,7 +593,7 @@ const cabinetTranslations = {
         views: ["view", "views", "views"], replies: ["reply", "replies", "replies"],
         bestPrice: "best price", coverage: "{a} of {b} parts",
         showDetails: "Parts and prices", hideDetails: "Hide",
-        markReplied: "I replied", markRepliedOn: "Replied ✓", reportShort: "Report", deliveryLabel: "Delivery", totalLabel: "Total to pay", callBtn: "Call", whatsappBtn: "WhatsApp", contactsHidden: "Return to Saved to open contacts", replySentLabel: "Reply sent", saveToSaved: "Save to Saved", backToSaved: "Return to Saved", savedLabel: "Saved", deadlineTitle: "Deadline: {a} of {b} days", viewsTitle: "Views: {n}", receivedReplies: "Received replies", detailsPhotos: "Parts and photos",
+        markReplied: "I replied", markRepliedOn: "Replied ✓", reportShort: "Report", deliveryLabel: "Delivery", totalLabel: "Total to pay", callBtn: "Call", whatsappBtn: "WhatsApp", contactsHidden: "Move the reply to Saved to see the seller's contact details", replySentLabel: "Reply sent", saveToSaved: "Save to Saved", backToSaved: "Return to Saved", savedLabel: "Saved", deadlineTitle: "Deadline: {a} of {b} days", viewsTitle: "Views: {n}", receivedReplies: "Received replies", detailsPhotos: "Parts and photos",
         answerTitle: "Reply to request", answerClose: "Close",
         swipeHint: "Swipe the card left to archive it, or right to save it.",
 swipeHintClose: "Dismiss the hint",
@@ -730,7 +730,7 @@ swipeHintClose: "Dismiss the hint",
         bestPrice: "лучшая цена", coverage: "{a} из {b} деталей",
         showDetails: "Детали и цены", hideDetails: "Свернуть",
 
-        markReplied: "Отклинулся", markRepliedOn: "Отклинулся ✓", reportShort: "Пожаловаться", deliveryLabel: "Доставка", totalLabel: "Всего к оплате", callBtn: "Позвонить", whatsappBtn: "WhatsApp", contactsHidden: "Верните в сохранённые, чтобы открыть контакты", replySentLabel: "Ответ отправлен", saveToSaved: "Сохранить в сохранённые", backToSaved: "Вернуть в сохранённые", savedLabel: "Сохранено", deadlineTitle: "Срок: {a} из {b} дн", viewsTitle: "Просмотры: {n}", receivedReplies: "Полученные ответы", detailsPhotos: "Детали и фото",
+        markReplied: "Отклинулся", markRepliedOn: "Отклинулся ✓", reportShort: "Пожаловаться", deliveryLabel: "Доставка", totalLabel: "Всего к оплате", callBtn: "Позвонить", whatsappBtn: "WhatsApp", contactsHidden: "Перенесите ответ в «Избранные», чтобы увидеть контакты продавца", replySentLabel: "Ответ отправлен", saveToSaved: "Сохранить в сохранённые", backToSaved: "Вернуть в сохранённые", savedLabel: "Сохранено", deadlineTitle: "Срок: {a} из {b} дн", viewsTitle: "Просмотры: {n}", receivedReplies: "Полученные ответы", detailsPhotos: "Детали и фото",
 
         answerTitle: "Ответ на запрос", answerClose: "Закрыть",
         swipeHint: "Проведите карточку влево, чтобы в архив, или вправо, чтобы в избранное.",
@@ -1711,6 +1711,57 @@ const cardPreviewTranslations = {
 };
 Object.keys(cardPreviewTranslations).forEach(language => {
     translations[language] = { ...translations[language], ...cardPreviewTranslations[language] };
+});
+
+const buyerRequestDetailsTranslations = {
+    en: { requestDetailsTitle: "Request details" },
+    ru: { requestDetailsTitle: "Детали заявки" },
+    de: { requestDetailsTitle: "Details zur Anfrage" },
+    fr: { requestDetailsTitle: "Détails de la demande" },
+    es: { requestDetailsTitle: "Detalles de la solicitud" },
+    it: { requestDetailsTitle: "Dettagli della richiesta" },
+    pt: { requestDetailsTitle: "Detalhes do pedido" },
+    pl: { requestDetailsTitle: "Szczegóły zapytania" },
+    ro: { requestDetailsTitle: "Detaliile cererii" },
+    lt: { requestDetailsTitle: "Užklausos informacija" },
+    zh: { requestDetailsTitle: "请求详情" }
+};
+Object.keys(buyerRequestDetailsTranslations).forEach(language => {
+    translations[language] = { ...translations[language], ...buyerRequestDetailsTranslations[language] };
+});
+
+const archiveClearConfirmTranslations = {
+    en: { savedClearConfirmTitle: "Clear archive?", savedClearConfirmBody: "All archived items will be removed from this device. This action cannot be undone." },
+    ru: { savedClearConfirmTitle: "Очистить архив?", savedClearConfirmBody: "Все элементы архива будут удалены с этого устройства. Это действие нельзя отменить." },
+    de: { savedClearConfirmTitle: "Archiv leeren?", savedClearConfirmBody: "Alle archivierten Elemente werden von diesem Gerät entfernt. Dieser Schritt kann nicht rückgängig gemacht werden." },
+    fr: { savedClearConfirmTitle: "Vider les archives ?", savedClearConfirmBody: "Tous les éléments archivés seront supprimés de cet appareil. Cette action est irréversible." },
+    es: { savedClearConfirmTitle: "¿Vaciar el archivo?", savedClearConfirmBody: "Todos los elementos archivados se eliminarán de este dispositivo. Esta acción no se puede deshacer." },
+    it: { savedClearConfirmTitle: "Svuotare l’archivio?", savedClearConfirmBody: "Tutti gli elementi archiviati verranno rimossi da questo dispositivo. L'operazione non può essere annullata." },
+    pt: { savedClearConfirmTitle: "Limpar o arquivo?", savedClearConfirmBody: "Todos os itens arquivados serão removidos deste dispositivo. Esta ação não pode ser desfeita." },
+    pl: { savedClearConfirmTitle: "Wyczyścić archiwum?", savedClearConfirmBody: "Wszystkie zarchiwizowane elementy zostaną usunięte z tego urządzenia. Tej czynności nie można cofnąć." },
+    ro: { savedClearConfirmTitle: "Goliți arhiva?", savedClearConfirmBody: "Toate elementele arhivate vor fi eliminate de pe acest dispozitiv. Acțiunea nu poate fi anulată." },
+    lt: { savedClearConfirmTitle: "Išvalyti archyvą?", savedClearConfirmBody: "Visi archyvuoti elementai bus pašalinti iš šio įrenginio. Šio veiksmo atšaukti negalima." },
+    zh: { savedClearConfirmTitle: "清空归档？", savedClearConfirmBody: "此设备上的所有归档内容都将被删除。此操作无法撤销。" }
+};
+Object.keys(archiveClearConfirmTranslations).forEach(language => {
+    translations[language] = { ...translations[language], ...archiveClearConfirmTranslations[language] };
+});
+
+const archivedContactsHintTranslations = {
+    en: { contactsHidden: "Move the reply to Saved to see the seller's contact details" },
+    ru: { contactsHidden: "Перенесите ответ в «Избранные», чтобы увидеть контакты продавца" },
+    de: { contactsHidden: "Verschieben Sie das Angebot in „Gespeichert“, um die Kontaktdaten des Verkäufers zu sehen" },
+    fr: { contactsHidden: "Déplacez la réponse dans « Enregistrés » pour voir les coordonnées du vendeur" },
+    es: { contactsHidden: "Mueve la respuesta a «Guardados» para ver los datos de contacto del vendedor" },
+    it: { contactsHidden: "Sposta la risposta in «Salvati» per vedere i contatti del venditore" },
+    pt: { contactsHidden: "Mova a resposta para «Guardados» para ver os contactos do vendedor" },
+    pl: { contactsHidden: "Przenieś odpowiedź do „Zapisanych”, aby zobaczyć dane kontaktowe sprzedawcy" },
+    ro: { contactsHidden: "Mută răspunsul în „Salvate” pentru a vedea datele de contact ale vânzătorului" },
+    lt: { contactsHidden: "Perkelkite atsakymą į „Išsaugoti“, kad pamatytumėte pardavėjo kontaktus" },
+    zh: { contactsHidden: "将回复移至“已收藏”，以查看卖家的联系方式" }
+};
+Object.keys(archivedContactsHintTranslations).forEach(language => {
+    translations[language] = { ...translations[language], ...archivedContactsHintTranslations[language] };
 });
 
 const crossNumberTranslations = {
@@ -4081,6 +4132,26 @@ const answerComparisonTranslations = {
 };
 Object.keys(answerComparisonTranslations).forEach(language => {
     translations[language] = { ...translations[language], ...answerComparisonTranslations[language] };
+});
+
+// Compact seller confirmation wording. The content is grouped by what is not
+// offered first, followed by the seller's offer; the count is rendered at the
+// same trailing position in both section headings.
+const answerConfirmOrderTranslations = {
+    en: { answerConfirmTitle: "Order confirmation", answerConfirmMissing: "Not offered", answerConfirmOffer: "Your Offer" },
+    ru: { answerConfirmTitle: "Подтверждение ответа", answerConfirmMissing: "Не предлагается", answerConfirmOffer: "Ваше предложение" },
+    zh: { answerConfirmTitle: "确认回复", answerConfirmMissing: "未提供", answerConfirmOffer: "您的报价" },
+    it: { answerConfirmTitle: "Conferma della risposta", answerConfirmMissing: "Non offerto", answerConfirmOffer: "La tua offerta" },
+    de: { answerConfirmTitle: "Antwortbestätigung", answerConfirmMissing: "Nicht angeboten", answerConfirmOffer: "Ihr Angebot" },
+    lt: { answerConfirmTitle: "Atsakymo patvirtinimas", answerConfirmMissing: "Nesiūloma", answerConfirmOffer: "Jūsų pasiūlymas" },
+    pt: { answerConfirmTitle: "Confirmação da resposta", answerConfirmMissing: "Não oferecido", answerConfirmOffer: "Sua oferta" },
+    es: { answerConfirmTitle: "Confirmación de la respuesta", answerConfirmMissing: "No ofrecido", answerConfirmOffer: "Tu oferta" },
+    pl: { answerConfirmTitle: "Potwierdzenie odpowiedzi", answerConfirmMissing: "Nieoferowane", answerConfirmOffer: "Twoja oferta" },
+    fr: { answerConfirmTitle: "Confirmation de la réponse", answerConfirmMissing: "Non proposé", answerConfirmOffer: "Votre offre" },
+    ro: { answerConfirmTitle: "Confirmarea răspunsului", answerConfirmMissing: "Neofertat", answerConfirmOffer: "Oferta ta" }
+};
+Object.keys(answerConfirmOrderTranslations).forEach(language => {
+    translations[language] = { ...translations[language], ...answerConfirmOrderTranslations[language] };
 });
 
 const answerConfirmMoreTranslations = {
